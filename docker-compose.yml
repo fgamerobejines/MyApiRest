@@ -21,11 +21,11 @@ volumes:
 
 x-shared_environment: &shared_environment
     LOG_LEVEL: ${LOG_LEVEL:-debug}
-    DATABASE_HOST: aws-0-eu-west-3.pooler.supabase.com
+    DATABASE_HOST: 127.0.0.1
     DATABASE_NAME: postgres
-    DATABASE_USERNAME: postgres.gklqpiycfumrojnnxpxl
-    DATABASE_PASSWORD: Josgambej.142214
-    DATABASE_PORT: 6543
+    DATABASE_USERNAME: f.gamero.bejines
+    DATABASE_PASSWORD: 123456
+    DATABASE_PORT: 5432
   
 services:
   app:

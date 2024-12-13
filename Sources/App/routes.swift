@@ -29,8 +29,15 @@ func routes(_ app: Application) throws {
         var credentials: [CredentialDTO] = []
         
         do {
-            if FileManager.default.fileExists(atPath: "/Users/f.gamero.bejines/Repos/APIVapor/MyAPIRest/Credentials.json"){
-                let url = URL(filePath: "/Users/f.gamero.bejines/Repos/APIVapor/MyAPIRest/Credentials.json")
+            let currentFilePath = #file
+            let projectRootPath = URL(fileURLWithPath: currentFilePath)
+                .deletingLastPathComponent() // Remueve el archivo actual
+                .deletingLastPathComponent() // Ajusta según la estructura de tu proyecto
+                .deletingLastPathComponent()
+            let path = projectRootPath.appendingPathComponent("Credentials.json").path
+
+            if FileManager.default.fileExists(atPath: path){
+                let url = URL(filePath: path)
                 let data = try Data(contentsOf: url)
                 
                 credentials =  try decoder.decode([CredentialDTO].self, from: data)

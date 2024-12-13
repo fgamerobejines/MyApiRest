@@ -33,7 +33,7 @@ RUN swift build -c release \
 WORKDIR /staging
 
 # Copy main executable to staging area
-RUN cp "$(swift build --package-path /build -c release --show-bin-path)/MyAPIRest" ./
+RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./
 
 # Copy static swift backtracer binary to staging area
 RUN cp "/usr/libexec/swift/linux/swift-backtrace-static" ./
@@ -85,4 +85,4 @@ EXPOSE 8080
 
 # Start the Vapor service when the image is run, default to listening on 8080 in production environment
 ENTRYPOINT ["./MyAPIRest"]
-CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]
+CMD ["./MyAPIRest"]

@@ -2,9 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "App",
+    name: "MyAPIRest",
     platforms: [
        .macOS(.v13)
+    ],
+    products: [
+        .executable(name: "MyAPIRest", targets: ["App"])
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.

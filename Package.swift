@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyAPIRest",
+    name: "App",
     platforms: [
        .macOS(.v13)
     ],
     products: [
-        .executable(name: "MyAPIRest",
+        .executable(name: "App",
                     targets: ["App"])
     ],
     dependencies: [

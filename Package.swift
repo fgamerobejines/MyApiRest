@@ -7,7 +7,8 @@ let package = Package(
        .macOS(.v13)
     ],
     products: [
-        .executable(name: "MyAPIRest", targets: ["App"])
+        .executable(name: "MyAPIRest",
+                    targets: ["App"])
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.

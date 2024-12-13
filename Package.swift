@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyAPIRest",
+    name: "App",
     platforms: [
        .macOS(.v13)
     ],

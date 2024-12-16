@@ -69,7 +69,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
 RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /App vapor
 
 # Switch to the new home directory
-WORKDIR /app
+WORKDIR /App
 
 # Copy built executable and any staged resources from builder
 COPY --from=build --chown=vapor:vapor /staging /App

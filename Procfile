@@ -1,1 +1,1 @@
-web: App --env production --hostname 0.0.0.0 --port $PORT
+web: .build/release/Run serve --env production

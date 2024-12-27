@@ -1,1 +1,1 @@
-web: .build/production/App serve --env production
+web: .build/debug/App serve --env production

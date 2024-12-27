@@ -1,1 +1,1 @@
-web: .build/release/Run serve --env production
+web: .build/production/App serve --env production
